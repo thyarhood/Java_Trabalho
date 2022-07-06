@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ProcuraInformacao {
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		String nome[];
+		nome = new String[5];
+		int telefone[];
+		telefone = new int[5];
+		String rua[];
+		rua = new String[5];
+		String nome_procura;
+		
+		for(int i = 0; i < 5; i++) {
+			System.out.printf("Informe o nome: ");
+			nome[i] = sc.nextLine();
+			System.out.printf("Informe o telefone: ");
+			telefone[i] = sc.nextInt();
+			System.out.printf("Informe a rua: ");
+			rua[i] = sc.nextLine();
+			rua[i] = sc.nextLine();
+			System.out.println(" ");
+		}
+		
+		System.out.println("Digite o nome que voce deseja procurar: ");
+		nome_procura = sc.nextLine();
+		
+		for(int i = 0; i < 5; i++) {
+			if(nome[i].equals(nome_procura)) {
+				System.out.println("Rua == " + rua[i] + "\nTelefone == " + telefone[i]);
+			}
+		}
+		
+		sc.close();
+	}
+}
