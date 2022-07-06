@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CarroAlgortimo {
+	public static void main(String args[]) {
+	
+	Scanner sc = new Scanner(System.in);
+	double distancia;
+	String tipo_carro;
+	double consumo_estimado = 0;
+	
+	System.out.println("Digite quantos quilometros foram percorridos: ");
+	distancia = sc.nextDouble();
+	
+	System.out.println("Digite o tipo do carro: ");
+	tipo_carro = sc.nextLine();
+	tipo_carro = sc.nextLine();
+	
+	tipo_carro = tipo_carro.toUpperCase();
+	
+	if(tipo_carro.equals("A")) {
+	consumo_estimado = distancia * 12;
+	}
+		else if(tipo_carro.equals("B")) {
+		consumo_estimado = distancia * 9; 
+		}
+			else if(tipo_carro.equals("C")) {
+			consumo_estimado = distancia * 8;
+			}
+	System.out.println("O consumo de gasolina estimado sera de: " + consumo_estimado);
+	
+	sc.close();
+	}
+}
