@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class InverteFrase {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		String frase,armazena_frase = "";
+		String frase_letras[];
+		
+		System.out.println("Digite uma frase: ");
+		frase = sc.nextLine();
+		int a = 0, b = 1, c = 0;
+		
+		c = frase.length();
+		frase_letras = new String[frase.length()];
+		
+		for(int i = 0; i < c; i++) {
+			frase_letras[i] = frase.substring(a,b);
+			a++;
+			b++;
+		}
+		
+		for(int i = c - 1; i >= 0; i--) {
+			armazena_frase =  armazena_frase + frase_letras[i];
+			
+		}
+		
+		System.out.println(armazena_frase);
+		
+		sc.close();
+		
+	}
+
+}
