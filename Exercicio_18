@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class ComparaConjuntos {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		int conj_1[];
+		conj_1 = new int[5];
+		
+		int conj_2[];
+		conj_2 = new int[10];
+		
+		int igual = 0, guarda_igual[],t = 0;
+		guarda_igual = new int[8];
+		
+		for(int i = 0; i < 5; i++) {
+			System.out.printf("Digite o %dº numero do primeiro conjunto: ",i + 1);
+			conj_1[i] = sc.nextInt();
+		}
+		
+				System.out.println("");
+				
+			for(int i = 0; i < 8; i++) {
+				System.out.printf("Digite o %dº numero do segundo conjunto: ",i + 1);
+				conj_2[i] = sc.nextInt();
+			}
+			
+				System.out.println("");
+				
+				for(int i = 0; i < 8; i++) {
+					igual = 0;
+					for(int j = 0; j < 5; j++) {
+						if(conj_2[i] == conj_1[j]) {
+							igual = 1;
+							guarda_igual[t] = conj_1[j];
+							j = 6;
+							t++;
+						}
+					}
+					if(igual == 0) {
+					System.out.println("Este numero nao pertence aos dois conjuntos ao mesmo tempo: " + conj_2[i]);	
+					}
+				}
+				
+						for(int a = 0; a < 5; a++) {
+							igual = 0;
+							for(int b = 0; b < t; b++) {
+								if(guarda_igual[b] == conj_1[a]) {
+									igual = 1;
+								}
+							}
+							if(igual == 0) {
+							System.out.println("Este numero nao pertence aos dois conjuntos ao mesmo tempo: " + conj_1[a]);
+							}
+						}
+									
+		sc.close();	
+	}
+}
+
+							
+							
+							
+							
