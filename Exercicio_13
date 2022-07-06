@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Potencia {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int base,expoente = 0,resultado = 1;
+		System.out.println("Digite o valor da base: ");
+		base = sc.nextInt();
+		System.out.println("Digite o valor do expoente: ");
+		expoente = sc.nextInt();	
+		
+		if(base >= 2 && expoente > 1) {
+		for(int i = 0; i < expoente; i++) {
+			resultado = base * resultado;
+		}
+		System.out.println("O resultado da potenciaçao sera: " + resultado);	
+		}
+		else {
+			System.out.println("Um dos valores que voce digitou nao é valido");
+		}
+		sc.close();
+	}
+
+}
